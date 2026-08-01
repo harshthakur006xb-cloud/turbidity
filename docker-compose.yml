@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  aquaspot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aquaspot_app
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
