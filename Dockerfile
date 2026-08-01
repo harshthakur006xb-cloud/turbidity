@@ -10,11 +10,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # Copy requirements & install dependencies
-COPY backend/requirements.txt ./backend/
 RUN pip install --no-cache-dir -r backend/requirements.txt
 
 # Copy backend and frontend static build
-COPY backend/ ./backend/
 
 EXPOSE 8000
 
